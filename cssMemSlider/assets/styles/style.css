@@ -1,3 +1,6 @@
+body{
+    background-color: rgba(0, 0, 0, 0.8);
+}
 header,footer{
     height: 20px;
     display: block;
@@ -12,31 +15,80 @@ header,footer{
     height: 100vh;
 
 }
+.container{
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.mem-slider{
+    display: flex;
+    width: 700px;
+    overflow: hidden;
+}
 .mem img{
-    max-width: 100%;
+    /* max-width: 100%; */
+    max-height: 500px;
+    width: 700px;
+    
+}
+.mem{
+    position: relative;
+    height: 500px;
 }
 .mem-title{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+p{
+    position: absolute;
+    bottom: -21px;
+    left: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 2;
+}
+input[name="name"]{
+    visibility: hidden;
+    position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
 .mem-buttons{
     display: flex;
     gap: 5px;
+    margin-left: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: stretch;
+    margin-top: 10px;
 }
 .mem-button{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 2px solid aqua;
     background-color: aqua;
     cursor: pointer;
+}
+.mem-button:hover{
+    transform: scale(1.1);
+}
+.mem-button.active:hover{
+    transform: scale(1);
+}
+.mem-button.active{
+    background-color: black;
 }
 @media screen and (max-width: 767.9px) {
     .mem{
     max-width: 320px;
     margin: 0 auto;
-    padding: 5px;
     }
     .mem img{
     
@@ -46,9 +98,21 @@ header,footer{
     .mem{
     max-width: 1190px;
     margin: 0 auto;
-    padding: 15px;
     }
     .mem img{
     
 }
+}
+
+#r1:checked ~ .img-1 {
+    margin-left: -100%;
+}
+#r2:checked ~ .img-1 {
+    margin-left: -200%;
+}
+#r3:checked ~ .img-1 {
+    margin-left: -300%;
+}
+#r4:checked ~ .img-1 {
+    margin-left: -400%;
 }
