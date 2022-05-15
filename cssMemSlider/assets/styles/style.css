@@ -57,7 +57,7 @@ input[name="name"] {
 }
 .mem-buttons {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   padding: 20px 0 20px 400px;
   margin-left: auto;
   align-items: center;
@@ -67,13 +67,14 @@ input[name="name"] {
   background-color: black;
 }
 .mem-button {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  border: 2px solid aqua;
   background-color: aqua;
   cursor: pointer;
   transition: all 0.4s ease;
+  border-radius: 50em;
+  border: 5px solid black;
 }
 .mem-button:hover {
   transform: scale(1.2);
@@ -95,6 +96,7 @@ input[name="name"] {
   .mem-buttons {
       padding: 0;
       margin-left: 0;
+      margin-top: -70px;
   }
   .container{
       padding: 10px;
@@ -136,14 +138,14 @@ input[name="name"] {
   margin-left: -300%;
 }
 #r1:checked ~ .mem-buttons > .mem-button-1 {
-  background-color: black;
+  background-color: white;
 }
 #r2:checked ~ .mem-buttons > .mem-button-2 {
-  background-color: black;
+  background-color: white;
 }
 #r3:checked ~ .mem-buttons > .mem-button-3 {
-  background-color: black;
+  background-color: white;
 }
 #r4:checked ~ .mem-buttons > .mem-button-4 {
-  background-color: black;
+  background-color: white;
 }
